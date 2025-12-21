@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>xzl圣诞快乐</title>
+    <link rel="stylesheet" type="text/css" href="./圣诞快乐_files/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./圣诞快乐_files/default.css">
+    <link href="./圣诞快乐_files/main.css" rel="stylesheet">
+    <style type="text/css">
+        /* 全局样式重置 */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            overflow: hidden;
+            height: 100vh;
+        }
+        /* 打字机光标动画 */
+        .typed-cursor{
+            opacity: 1;
+            font-weight: 100;
+            -webkit-animation: blink 0.7s infinite;
+            -moz-animation: blink 0.7s infinite;
+            -ms-animation: blink 0.7s infinite;
+            -o-animation: blink 0.7s infinite;
+            animation: blink 0.7s infinite;
+        }
+        @keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-webkit-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-moz-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-ms-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        @-o-keyframes blink{
+            0% { opacity:1; }
+            50% { opacity:0; }
+            100% { opacity:1; }
+        }
+        .typed-fade-out{
+            opacity: 0;
+            animation: 0;
+            transition: opacity .25s;
+        }
+        /* xzl专属样式 */
+        .xzl-logo {
+            font-size: 1.8em;
+            font-weight: bold;
+            color: #ffd700;
+            margin-bottom: 10px;
+            text-shadow: 0 0 10px rgba(255,215,0,0.8);
+        }
+        /* 圣诞树响应式适配（核心） */
+        .christmas-tree {
+            position: absolute;
+            width: 60%;
+            max-width: 700px;
+            min-width: 300px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            object-fit: contain;
+            z-index: 1;
+            opacity: 0.95;
+        }
+        /* 文字区域：靠左显示，不遮挡圣诞树 */
+        .type-wrap {
+            padding: 10px 20px;
+            position: absolute;
+            top: 50%;
+            left: 20px; /* 固定左侧定位 */
+            transform: translateY(-50%); /* 垂直居中，水平靠左 */
+            z-index: 500;
+            color: #ffffff;
+            font-size: 14px;
+            width: 280px; /* 固定宽度，避免过宽遮挡 */
+            text-align: left !important; /* 文字左对齐 */
+            background: rgba(0,0,0,0.3); /* 半透明背景，提升文字可读性 */
+            border-radius: 8px;
+            padding: 15px;
+        }
+        /* 移动端适配 */
+        @media (max-width: 768px) {
+            .christmas-tree {
+                width: 75%;
+                max-width: 500px;
+                top: 55%;
+                left: 60%; /* 移动端圣诞树稍右移，避开左侧文字 */
+            }
+            .type-wrap {
+                width: 200px;
+                font-size: 13px;
+                left: 10px;
+                top: 45%;
+                padding: 10px;
+            }
+            .xzl-logo {
+                font-size: 1.5em;
+            }
+        }
+        @media (max-width: 480px) {
+            .christmas-tree {
+                width: 85%;
+                max-width: 400px;
+                top: 60%;
+                left: 65%;
+            }
+            .type-wrap {
+                width: 160px;
+                font-size: 12px;
+                left: 5px;
+            }
+            .xzl-logo {
+                font-size: 1.3em;
+            }
+        }
+        /* 音乐图标：固定右上角，确保可点击 */
+        #music_ico {
+            position: fixed;
+            top: 15px;
+            right: 15px;
+            z-index: 999 !important;
+            cursor: pointer;
+            width: 36px;
+            height: 36px;
+        }
+        /* 音乐图标旋转动画 */
+        @keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @-webkit-keyframes rotate {
+            0% { -webkit-transform: rotate(0deg); }
+            100% { -webkit-transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <!-- 音乐模块：新增autoplay和muted属性（核心改动1） -->
+    <img id="music_ico" onclick="clickMusic()" alt="音乐开关" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA1MTIgNTEyIj48cGF0aCBkPSJNMjU2IDhDMTE5IDggOCAxMTkgOCAyNTZzMTExIDI0OCAyNDggMjQ4IDI0OC0xMTEgMjQ4LTI0OFMzOTMgOCAyNTYgOHptMCA0NDhjLTExMC41IDAtMjAwLTg5LjUtMjAwLTIwMFMxNDUuNSA1NiAyNTYgNTZzMjAwIDg5LjUgMjAwIDIwMC04OS41IDIwMC0yMDAgMjAwem0-NS42LTExOGwtNzYuOCA0NS44QzE2OS4xIDMxMS4xIDE2MCAyOTguMiAxNjAgMjg0VjIyOGMwLTE0LjIgOS4xLTI3LjEgMjMuNi0zMDFsNzYuOC00NS44YzcuMS00LjIgMTYuMi02LjQgMjUuNi02LjRoNDguOGM5LjQgMCAxOC41IDIuMiAyNS42IDYuNGw3Ni44IDQ1LjhjMTQuNSAyLjkgMjMuNiAxNS44IDIzLjYgMzAxdi01NmMwLTE0LjItOS4xLTI3LjEtMjMuNi0zMDFsLTc2LjgtNDUuOGMtNy4xLTQuMi0xNi4yLTYuNC0yNS42LTYuNGgtNDguOGMtOS40IDAtMTguNSAyLjItMjUuNiA2LjR6IiBmaWxsPSJ3aGl0ZSIvPjwvc3ZnPg==">
+    <audio id="audio" src="https://sf6-cdn-tos.douyinstatic.com/obj/ies-music/6905357668872063752.mp3" preload="auto" loop="loop" autoplay muted></audio>
+
+    <!-- 雪花背景容器 -->
+    <div id="divSnow-1" class="htmleaf-content canvas-1" style="position:absolute; width:100%; height:100%; z-index:-1; background:#000000;">
+        <!-- 圣诞树图片 -->
+        <img class="christmas-tree" src="./圣诞快乐_files/b3cacbc2fe294f42b13a0cf1b5c60443~noop.image" alt="圣诞树">
+
+        <!-- 文字区域：靠左显示 -->
+        <div class="type-wrap">
+            <div id="typed-strings" style="display: none;">
+                <p>
+                    <span class="xzl-logo">xzl圣诞快乐</span><br>
+                    圣诞老爷爷<br>
+                    昨天偷偷告诉我 <br>
+                    你就是我的礼物<br>
+                    Ꮍྀིℂʜʀɪsᴛᴍᴀs
+                </p>
+            </div>
+            <span id="typed" style="white-space:pre; display: inline-block;"></span>
+            <span class="typed-cursor">|</span>
+        </div>
+    </div>
+
+    <!-- 核心脚本引用 -->
+    <script src="./圣诞快乐_files/jquery.min.js.下载" type="text/javascript"></script>
+    <script>window.jQuery || document.write('<script src="static/js/jquery-1.11.0.min.js"><\/script>')</script>
+    <script src="./圣诞快乐_files/typed.js.下载" type="text/javascript"></script>
+    <script type="text/javascript" src="./圣诞快乐_files/websnowjq.js.下载"></script>
+
+    <!-- 音乐模块完整功能脚本 -->
+    <script type="text/javascript">
+        // 音乐状态标记
+        var musicPlayed = false;
+        var audio = document.getElementById('audio');
+
+        // 页面加载后立即尝试自动播放（核心改动2）
+        window.onload = function() {
+            autoPlayMusic();
+        };
+
+        // 自动播放逻辑：先静音播放，再取消静音
+        function autoPlayMusic() {
+            // 尝试播放音频
+            audio.play().then(() => {
+                musicPlayed = true;
+                // 播放成功后取消静音（关键：静音自动播放后解锁声音）
+                audio.muted = false;
+                // 音乐图标开始旋转
+                document.getElementById('music_ico').style.animation = 'rotate 3s linear infinite';
+            }).catch(err => {
+                console.log('自动播放失败（浏览器限制）:', err);
+                // 播放失败时提示用户手动点击
+                alert('请点击右上角音乐图标手动播放圣诞音乐～');
+            });
+        }
+
+        // 点击音乐图标切换播放/暂停
+        function clickMusic() {
+            if (audio.paused) {
+                audio.play();
+                audio.muted = false; // 确保取消静音
+                document.getElementById('music_ico').style.animation = 'rotate 3s linear infinite';
+            } else {
+                audio.pause();
+                document.getElementById('music_ico').style.animation = '';
+            }
+            musicPlayed = true; // 标记已手动操作
+        }
+
+        // 打字机+雪花效果初始化
+        $(document).ready(function() {
+            // 雪花效果
+            $("#divSnow-1").websnowjq();
+            // 打字机效果（流畅无延迟）
+            Typed.new("#typed", {
+                stringsElement: document.getElementById('typed-strings'),
+                typeSpeed: 70,
+                startDelay: 0,
+                backDelay: 800,
+                loop: false,
+                contentType: 'html',
+                showCursor: true,
+                cursorChar: '|',
+                autoInsertCss: true
+            });
+        });
+    </script>
+</body>
+</html>
