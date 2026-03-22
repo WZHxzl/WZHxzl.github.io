@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中华优秀传统文化内涵 - 线上展览</title>
+    <!-- 引入Tailwind CSS，简化样式编辑 -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 国风配色自定义配置 -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bronze: '#8B4513', // 青铜主色
+                        rice: '#F5F0E1',   // 宣纸底色
+                        ink: '#2C2C2C',    // 墨色
+                        celadon: '#2F4F4F',// 青瓷色
+                    },
+                    fontFamily: {
+                        song: ['"Noto Serif SC"', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .text-shadow { text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
+            .carousel-item { transition: all 0.5s ease; }
+            .scroll-smooth { scroll-behavior: smooth; }
+        }
+    </style>
+    <!-- 引入中文字体 -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-rice text-ink font-song scroll-smooth">
+
+<!-- 固定导航栏 -->
+<nav class="fixed top-0 left-0 w-full bg-ink/90 text-white z-50 backdrop-blur-sm">
+    <div class="container mx-auto px-4 py-3 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm md:text-base">
+        <a href="#preamble" class="hover:text-rice transition-colors">序厅</a>
+        <a href="#unit1" class="hover:text-rice transition-colors">以人为本</a>
+        <a href="#unit2" class="hover:text-rice transition-colors">天人合一</a>
+        <a href="#unit3" class="hover:text-rice transition-colors">家国情怀</a>
+        <a href="#unit4" class="hover:text-rice transition-colors">崇德尚贤</a>
+        <a href="#unit5" class="hover:text-rice transition-colors">自强不息</a>
+        <a href="#unit6" class="hover:text-rice transition-colors">和而不同</a>
+        <a href="#epilogue" class="hover:text-rice transition-colors">尾声</a>
+    </div>
+</nav>
+
+<!-- 序厅 前言 -->
+<section id="preamble" class="min-h-screen flex flex-col justify-center items-center px-4 pt-20 pb-16 bg-gradient-to-b from-ink to-celadon text-white">
+    <h1 class="text-[clamp(2rem,5vw,4rem)] font-bold text-center mb-8 text-shadow">中华优秀传统文化内涵</h1>
+    <div class="max-w-4xl mx-auto text-center text-lg md:text-xl leading-relaxed">
+        <p class="mb-4">本序厅作为展览开篇，聚焦中华文明五千年绵延不断的精神根脉与核心内涵。</p>
+        <p class="mb-4">这里凝练呈现中华文化多元一体、兼容并蓄、守正创新的特质，诠释天人合一的哲思、民为邦本的理念、家国天下的情怀与和而不同的胸襟，勾勒出中华文明生生不息的传承脉络。</p>
+        <p class="mt-8 text-xl md:text-2xl font-medium">以文脉为引，以精神为魂，由此开启探寻中华优秀传统文化深厚底蕴与时代价值的文明之旅。</p>
+    </div>
+    <a href="#unit1" class="mt-12 animate-bounce">
+        <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+        </svg>
+    </a>
+</section>
+
+<!-- 单元1：以人为本 -->
+<section id="unit1" class="py-20 px-4">
+    <div class="container mx-auto max-w-6xl">
+        <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-bronze text-center mb-4">第一单元 以人为本（民本思想）</h2>
+        <p class="text-center text-lg mb-12 max-w-3xl mx-auto">追溯“仁政德治”源流，诠释以民为本的治国理政逻辑。</p>
+        
+        <!-- 旋转木马轮播组件 -->
+        <div class="carousel-container relative w-full h-[400px] md:h-[500px] mx-auto overflow-hidden" data-unit="1">
+            <div class="carousel-track relative w-full h-full flex items-center justify-center perspective-[1000px]"></div>
+            <!-- 前后切换按钮 -->
+            <button class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            <button class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- 单元2：天人合一 -->
+<section id="unit2" class="py-20 px-4 bg-white/50">
+    <div class="container mx-auto max-w-6xl">
+        <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-bronze text-center mb-4">第二单元 天人合一（道法自然）</h2>
+        <p class="text-center text-lg mb-12 max-w-3xl mx-auto">探寻顺应自然规律的哲理，彰显与自然共生的东方哲学。</p>
+        
+        <div class="carousel-container relative w-full h-[400px] md:h-[500px] mx-auto overflow-hidden" data-unit="2">
+            <div class="carousel-track relative w-full h-full flex items-center justify-center perspective-[1000px]"></div>
+            <button class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+            <button class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- 单元3：家国情怀 -->
+<section id="unit3" class="py-20 px-4">
+    <div class="container mx-auto max-w-6xl">
+        <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-bronze text-center mb-4">第三单元 爱国·家国情怀</h2>
+        <p class="text-center text-lg mb-12 max-w-3xl mx-auto">承载“修身齐家治国平天下”追求，镌刻世代家国大义。</p>
+        
+        <div class="carousel-container relative w-full h-[400px] md:h-[500px] mx-auto overflow-hidden" data-unit="3">
+            <div class="carousel-track relative w-full h-full flex items-center justify-center perspective-[1000px]"></div>
+            <button class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+            <button class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- 单元4：崇德尚贤 -->
+<section id="unit4" class="py-20 px-4 bg-white/50">
+    <div class="container mx-auto max-w-6xl">
+        <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-bronze text-center mb-4">第四单元 崇德尚贤（推崇正公）</h2>
+        <p class="text-center text-lg mb-12 max-w-3xl mx-auto">彰显选贤举能、以德为先的价值导向，传承美德。</p>
+        
+        <div class="carousel-container relative w-full h-[400px] md:h-[500px] mx-auto overflow-hidden" data-unit="4">
+            <div class="carousel-track relative w-full h-full flex items-center justify-center perspective-[1000px]"></div>
+            <button class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+            <button class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- 单元5：自强不息·厚德载物 -->
+<section id="unit5" class="py-20 px-4">
+    <div class="container mx-auto max-w-6xl">
+        <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-bronze text-center mb-4">第五单元 自强不息·厚德载物</h2>
+        <p class="text-center text-lg mb-12 max-w-3xl mx-auto">展现刚健进取、包容宽厚的民族风骨，凝聚奋进力量。</p>
+        
+        <div class="carousel-container relative w-full h-[400px] md:h-[500px] mx-auto overflow-hidden" data-unit="5">
+            <div class="carousel-track relative w-full h-full flex items-center justify-center perspective-[1000px]"></div>
+            <button class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+            <button class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- 单元6：和而不同 -->
+<section id="unit6" class="py-20 px-4 bg-white/50">
+    <div class="container mx-auto max-w-6xl">
+        <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-bronze text-center mb-4">第六单元 和而不同</h2>
+        <p class="text-center text-lg mb-12 max-w-3xl mx-auto">呈现包容开放、多元共存的智慧，诠释协和万邦的文化气度。</p>
+        
+        <div class="carousel-container relative w-full h-[400px] md:h-[500px] mx-auto overflow-hidden" data-unit="6">
+            <div class="carousel-track relative w-full h-full flex items-center justify-center perspective-[1000px]"></div>
+            <button class="carousel-prev absolute left-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path></svg>
+            </button>
+            <button class="carousel-next absolute right-2 top-1/2 -translate-y-1/2 z-10 w-10 h-10 bg-white/80 rounded-full flex items-center justify-center hover:bg-white transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- 尾声 -->
+<section id="epilogue" class="py-20 px-4 bg-gradient-to-t from-ink to-celadon text-white">
+    <div class="container mx-auto max-w-4xl">
+        <h2 class="text-[clamp(1.8rem,4vw,3rem)] font-bold text-center mb-8 text-shadow">文明永续 薪火相传</h2>
+        <div class="text-lg md:text-xl leading-relaxed">
+            <p class="mb-4">五千年栉风沐雨，数十代薪火相传。中华文明以未曾中断的绵延，在中华大地上书写了波澜壮阔的文明史诗，铸就了源远流长、博大精深的中华文化。</p>
+            <p class="mb-4">从多元一体的文明起源，到百家争鸣的思想迸发；从秦汉一统的文脉赓续，到盛唐气象的兼容并包；从宋明理学的义理深耕，到近代以来的守正开新，中华文化始终在传承中发展，在交融中新生。它以天人合一的哲思，探寻人与自然的和谐之道；以民为邦本的理念，锚定治国安邦的民生底色；以家国天下的情怀，凝聚自强不息的民族力量；以和而不同的胸襟，拥抱文明互鉴的时代潮流。</p>
+            <p class="mb-4">千百年间，中华文化既以海纳百川的气度，吸收借鉴外来文化的有益成果，完成自我革新与升华；更以开放包容的姿态，向世界传递东方智慧。汉字文脉远播东亚，四大发明推动世界变革，儒学思想启迪全球治理，为人类文明发展作出了不可磨灭的贡献。</p>
+            <p class="mt-8 text-xl md:text-2xl font-medium text-center">回望过往，文物载道，文脉铸魂。站在新的历史方位，我们当以史为鉴，坚定文化自信，赓续中华千年文脉，推动中华优秀传统文化创造性转化、创新性发展，为建设中华民族现代文明、推动构建人类命运共同体，续写属于新时代的文明华章。</p>
+        </div>
+    </div>
+</section>
+
+<!-- 文物详情弹窗 -->
+<div id="modal" class="fixed inset-0 bg-black/80 z-50 hidden flex items-center justify-center px-4 backdrop-blur-sm">
+    <div class="bg-rice rounded-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto">
+        <div class="p-6">
+            <div class="flex justify-between items-start mb-4">
+                <h3 id="modal-title" class="text-2xl font-bold text-bronze"></h3>
+                <button id="modal-close" class="text-ink hover:text-red-700 transition-colors">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <img id="modal-img" src="" alt="" class="w-full h-auto rounded-lg mb-6 object-contain max-h-[400px]">
+            <div class="space-y-3">
+                <p class="text-lg"><span class="font-semibold">馆藏/出处：</span><span id="modal-museum"></span></p>
+                <p class="text-lg leading-relaxed"><span class="font-semibold">展览解读：</span><span id="modal-desc"></span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+// 文物核心数据（可直接编辑修改、替换图片）
+const culturalRelics = {
+    1: [ // 以人为本
+        {id:1,name:"何尊",museum:"宝鸡青铜器博物院",img:"https://s41.ax1x.com/2026/03/21/peuPOaQ.jpg",desc:"铭文首次出现“中国”，体现周成王“居天下中心治民”的民本理政初心，是早期民本思想的实物佐证"},
+        {id:2,name:"《范泉书院记碑》",museum:"山东淄博博山范公祠",img:"https://s41.ax1x.com/2026/03/21/peuPxGn.jpg",desc:"记载清代知县拨款、乡民捐款兴学，体现“以民为本办教育”的民生理念，展现古代政府与民间的民生共治"},
+        {id:3,name:"尼山区抗日烈士纪念碑",museum:"山东邹城苗子岭",img:"https://s41.ax1x.com/2026/03/21/peuFW9A.jpg",desc:"碑文记载“照顾烈士家属”“为民抗战”，体现革命时期“以人民为中心”的执政理念，是民本思想的当代延续"},
+        {id:4,name:"“中国人民”五乳神兽镜",museum:"武汉博物馆",img:"https://s41.ax1x.com/2026/03/21/peuFInf.jpg",desc:"铭文含“多贺中国人民富，云雨时节五谷熟”，直接表达对民生富足的期盼，是汉代民本情感的器物载体"},
+        {id:5,name:"云梦睡虎地秦简·《为吏之道》",museum:"湖北省博物馆",img:"https://s41.ax1x.com/2026/03/21/peuFTHS.jpg",desc:"记载官吏“以民为本”的施政准则，如“宽以容众”，是秦朝官方对官员民本行为的规范"},
+        {id:6,name:"《尚书·尧典》（明刻本）",museum:"国家图书馆古籍馆",img:"https://s41.ax1x.com/2026/03/21/peuFHAg.jpg",desc:"记载尧“克明俊德、以亲九族”的治国理念，是上古“以民安邦”思想的经典文献，彰显民本思想源头"}
+    ],
+    2: [ // 天人合一
+        {id:1,name:"北京天坛（祈年殿/圜丘）",museum:"北京天坛公园",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/11.jpg",desc:"建筑设计融合“天圆地方”宇宙观，24柱对应24节气，体现“人顺应自然秩序”的天人合一理念"},
+        {id:2,name:"彩绘雁鱼铜灯",museum:"陕西历史博物馆",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/10.jpg",desc:"雁腹装水可吸收油烟，设计兼顾环保与实用，是古人“顺应自然、可持续利用”的造物智慧"},
+        {id:3,name:"长信宫灯",museum:"河北博物院",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/9.jpg",desc:"宫女右臂为烟道可收纳烟灰，灯罩可调节亮度，将环保设计与人文造型结合，诠释人与自然和谐共处"},
+        {id:4,name:"东汉力士博山炉",museum:"故宫博物院",img:"https://s41.ax1x.com/2026/03/21/peuFbNQ.jpg",desc:"炉盖仿山海云气造型，炉身绘自然狩猎场景，体现古人“寄情自然、与自然共生”的审美哲学"},
+        {id:5,name:"红河哈尼梯田",museum:"云南红河（世界遗产）",img:"https://s41.ax1x.com/2026/03/21/peuFqhj.jpg",desc:"延续1300年“森林-村寨-梯田-水系”四素同构生态系统，是人与自然和谐共生的活态遗产"},
+        {id:6,name:"隋代《游春图》",museum:"故宫博物院",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/12.jpg",desc:"现存最早卷轴山水画，描绘春日山水间人物游赏场景，直观呈现古人“寄情山水、亲近自然”的生活理念"}
+    ],
+    3: [ // 家国情怀
+        {id:1,name:"后母戊青铜方鼎",museum:"中国国家博物馆",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321231053_8481_2.jpg",desc:"商代最重青铜器，体现贵族对家族荣誉的重视，折射“家是国之基”的家国一体观念"},
+        {id:2,name:"“五星出东方利中国”锦护臂",museum:"新疆维吾尔自治区博物馆",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321231054_8482_2.jpg",desc:"铭文与汉代西域都护府设置相关，是汉王朝治理边疆、维护国家统一的见证"},
+        {id:3,name:"《千里江山图》",museum:"故宫博物院",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321231056_8483_2.jpg",desc:"绘华夏山河壮丽景象，体现北宋文人对家国山河的热爱与自豪，是“爱我中华”的艺术表达"},
+        {id:4,name:"曾侯乙编钟",museum:"湖北省博物馆",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321231057_8484_2.jpg",desc:"体现战国曾国国力，编钟“和鸣”象征民族和谐、国家安定，诠释“家国安宁”的价值追求"},
+        {id:5,name:"郑和布施锡兰山佛寺碑",museum:"斯里兰卡国家博物馆（拓片）",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321231058_8485_2.jpg",desc:"碑刻中文、泰米尔文、波斯文三种文字，见证郑和下西洋的中外友好，彰显“家国同兴、协和万邦”的胸怀"},
+        {id:6,name:"小山战斗纪念遗址",museum:"山东邹城",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321231059_8486_2.jpg",desc:"记载八路军“与小山共存亡”的抗战事迹，体现军民共护家国的牺牲精神，是当代家国情怀的鲜活教材"}
+    ],
+    4: [ // 崇德尚贤
+        {id:1,name:"《荀子·王制》（明刻本）",museum:"中华古籍智慧化平台",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321231341_8487_2.jpg",desc:"记载“尚贤使能”核心思想，明确“选贤不看出身、重德能”的选拔原则"},
+        {id:2,name:"袁安卧雪图（明·沈周）",museum:"故宫博物院",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321231429_8488_2.jpg",desc:"讲述东汉袁安雪天守德不扰民，被举荐为官的故事，诠释“德才兼备”的尚贤标准"},
+        {id:3,name:"三顾茅庐典故浮雕",museum:"成都武侯祠",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321231639_8489_2.jpg",desc:"刘备礼贤请诸葛亮，体现“求贤若渴、以德聚才”的治国智慧，是尚贤思想的经典演绎"},
+        {id:4,name:"周公吐哺画像石",museum:"山东汉画像石博物馆",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321231658_8490_2.jpg",desc:"刻画周公接待贤士的场景，彰显“礼贤下士”的品德，成为后世“尚贤”的道德典范"},
+        {id:5,name:"《范泉书院记碑》",museum:"山东博山范公祠",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321231726_8491_2.jpg",desc:"记载乡民捐资助学、政府扶持书院，体现“崇教育贤、以德兴邦”的实践"},
+        {id:6,name:"清华校训壁碑",museum:"清华大学图书馆",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321231745_8492_2.jpg",desc:"以“崇德尚贤”为核心，彰显“选贤举能、以德立身”的价值追求，是当代崇德思想的载体"}
+    ],
+    5: [ // 自强不息
+        {id:1,name:"清华校训壁碑",museum:"清华大学图书馆",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321231745_8492_2.jpg",desc:"源自《周易》卦辞，是民族精神的凝练，激励一代代人奋进包容"},
+        {id:2,name:"都江堰",museum:"四川成都",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321231909_8493_2.jpg",desc:"2000年仍在使用，体现古人“刚健有为、顺势而为”的自强精神，是人与自然和谐的工程典范"},
+        {id:3,name:"京杭大运河（三湾抵一坝）",museum:"江苏扬州",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321231910_8494_2.jpg",desc:"以河湾缓流保运河安澜，体现“刚健进取、包容变通”的治水智慧，彰显自强不息的民族品格"},
+        {id:4,name:"后母戊青铜方鼎",museum:"中国国家博物馆",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321231911_8495_2.jpg",desc:"商代最高水平的青铜铸造，体现先民“精益求精、自强不息”的创造精神"},
+        {id:5,name:"曾侯乙编钟",museum:"湖北省博物馆",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321231913_8496_2.jpg",desc:"复杂的铸造工艺与音律设计，彰显古人“追求卓越、刚健进取”的精神特质"},
+        {id:6,name:"明代竹雕“万象回春”摆件",museum:"山东曲阜孔子博物馆",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321231914_8497_2.jpg",desc:"象身饰诚信、中庸、仁等儒家美德，以“厚德载物”的意象诠释包容宽厚的民族风骨"}
+    ],
+    6: [ // 和而不同
+        {id:1,name:"法门寺唐代琉璃器",museum:"法门寺博物馆",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321232820_8498_2.jpg",desc:"含域外琉璃器，见证唐代中外文化交流，体现“和而不同、兼容并蓄”的文化气度"},
+        {id:2,name:"郑和布施锡兰山佛寺碑",museum:"斯里兰卡国家博物馆（拓片）",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/333.jpg",desc:"中、泰、波三种文字刻碑，见证中外文化交流，诠释“和而不同、协和万邦”的理念"},
+        {id:3,name:"黑石号沉船文物",museum:"印度尼西亚海域（唐代文物）",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321233044_8500_2.jpg",desc:"阿拉伯商船载数万件中国唐代文物，见证海上丝绸之路中外文化共存，体现开放包容"},
+        {id:4,name:"汉代鎏金铜蚕",museum:"陕西历史博物馆",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321233137_8501_2.jpg",desc:"象征丝绸贸易，见证中外经济文化交流，彰显“和而不同、互利共赢”的精神"},
+        {id:5,name:"《论语导读》（法文版）",museum:"国家图书馆",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321233214_8502_2.jpg",desc:"儒家经典西传的见证，体现中华文化对外传播的包容气度，诠释“和而不同”的文明交流"},
+        {id:6,name:"秘鲁西坎文化金面具",museum:"秘鲁国家博物馆",img:"https://wzhxzl.oss-cn-hangzhou.aliyuncs.com/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20260321233215_8503_2.jpg",desc:"与三星堆金面具形制相似，见证中外文明相似性，体现人类文明多元共存的“和而不同”"}
+    ]
+};
+
+// 弹窗控制
+const modal = document.getElementById('modal');
+const modalClose = document.getElementById('modal-close');
+function openModal(relic) {
+    document.getElementById('modal-title').textContent = relic.name;
+    document.getElementById('modal-img').src = relic.img;
+    document.getElementById('modal-img').alt = relic.name;
+    document.getElementById('modal-museum').textContent = relic.museum;
+    document.getElementById('modal-desc').textContent = relic.desc;
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+}
+modalClose.addEventListener('click', () => {
+    modal.classList.add('hidden');
+    document.body.style.overflow = 'auto';
+});
+modal.addEventListener('click', (e) => e.target === modal && (modal.classList.add('hidden'), document.body.style.overflow = 'auto'));
+
+// 旋转木马轮播初始化
+function initCarousel(unitId) {
+    const container = document.querySelector(`.carousel-container[data-unit="${unitId}"]`);
+    const track = container.querySelector('.carousel-track');
+    const prevBtn = container.querySelector('.carousel-prev');
+    const nextBtn = container.querySelector('.carousel-next');
+    const relics = culturalRelics[unitId];
+    let currentIndex = 0;
+
+    // 生成轮播项
+    function renderCarousel() {
+        track.innerHTML = '';
+        relics.forEach((relic, index) => {
+            const item = document.createElement('div');
+            item.className = 'carousel-item absolute w-[280px] md:w-[350px] cursor-pointer';
+            item.innerHTML = `
+                <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-2xl transition-all">
+                    <img src="${relic.img}" alt="${relic.name}" class="w-full h-[200px] md:h-[250px] object-cover">
+                    <div class="p-4">
+                        <h3 class="text-lg font-bold text-bronze mb-1">${relic.name}</h3>
+                        <p class="text-sm text-gray-600 line-clamp-2">${relic.museum}</p>
+                    </div>
+                </div>
+            `;
+            item.addEventListener('click', () => openModal(relic));
+            track.appendChild(item);
+        });
+        updateCarousel();
+    }
+
+    // 更新轮播3D效果
+    function updateCarousel() {
+        const items = track.querySelectorAll('.carousel-item');
+        const itemCount = items.length;
+        const angleStep = 360 / itemCount;
+        items.forEach((item, index) => {
+            const offset = (index - currentIndex + itemCount) % itemCount;
+            const rotateY = offset * angleStep;
+            const opacity = offset === 0 ? 1 : 0.7;
+            const scale = offset === 0 ? 1.1 : 0.8;
+            const zIndex = offset === 0 ? 10 : 5 - Math.abs(offset - itemCount/2);
+            item.style.transform = `rotateY(${rotateY}deg) translateZ(300px) scale(${scale})`;
+            item.style.opacity = opacity;
+            item.style.zIndex = zIndex;
+        });
+    }
+
+    // 切换事件
+    prevBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex - 1 + relics.length) % relics.length;
+        updateCarousel();
+    });
+    nextBtn.addEventListener('click', () => {
+        currentIndex = (currentIndex + 1) % relics.length;
+        updateCarousel();
+    });
+
+    // 自动播放
+    let autoPlay = setInterval(() => {
+        currentIndex = (currentIndex + 1) % relics.length;
+        updateCarousel();
+    }, 5000);
+    container.addEventListener('mouseenter', () => clearInterval(autoPlay));
+    container.addEventListener('mouseleave', () => autoPlay = setInterval(() => {
+        currentIndex = (currentIndex + 1) % relics.length;
+        updateCarousel();
+    }, 5000));
+
+    renderCarousel();
+}
+
+// 页面加载完成初始化所有轮播
+document.addEventListener('DOMContentLoaded', () => {
+    for (let i = 1; i <= 6; i++) initCarousel(i);
+});
+</script>
+</body>
+</html>
